@@ -1,20 +1,18 @@
 import {Component, View, Inject, OnDestroy, OnInit} from 'angular2/core';
 import {bindActionCreators} from 'redux';
 import {Counter} from '../components/counter/counter';
+import SkillBar from '../components/skill-bar';
 import * as CounterActions from '../actions/counter';
+
+require('font-awesome-webpack');
 
 @Component({
   selector: 'root'
 })
 @View({
-  directives: [Counter],
+  directives: [SkillBar],
   template: `
-  <counter [counter]="counter"
-    [increment]="increment"
-    [decrement]="decrement"
-    [incrementIfOdd]="incrementIfOdd"
-    [incrementAsync]="incrementAsync">
-  </counter>
+  <skill-bar></skill-bar>
   `
 })
 export default class App implements OnDestroy, OnInit {

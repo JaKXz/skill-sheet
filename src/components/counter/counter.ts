@@ -1,9 +1,8 @@
 
-import {Component, View} from 'angular2/core';
+import {Attribute, Component, View, Injectable, Inject, Input} from 'angular2/core';
 @Component({
   selector: 'counter',
   properties: [
-    'counter',
     'increment',
     'decrement',
     'incrementIfOdd',
@@ -21,5 +20,10 @@ import {Component, View} from 'angular2/core';
   </p>
   `
 })
+
 export class Counter {
+  @Input() counter;
+  constructor() {
+    console.log('wtf', this.counter);
+  }
 }

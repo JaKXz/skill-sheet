@@ -36,11 +36,11 @@ export default class SkillBar {
   select = (index) => {
     this.rating = index;
     this.buildState();
-  }
+  };
   
   buildState() {
     this.stars = R.concat(
-      R.repeat(true, this.rating), 
+      R.repeat(true, this.rating),
       R.repeat(false, 10 - this.rating)
     );
   }

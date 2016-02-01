@@ -1,11 +1,32 @@
-# Angular 2/TypeScript/Redux/Webpack Starter
+# Skill Sheet Demo App 
 
-This is the initial version of our starter project using Angular 2.x, Redux, TypeScript and Webpack to tie it all together.
+This is an attempt at a non trivial Angular 2.x, Redux, TypeScript and Webpack app to clearly showcase how real world scenarios can be implemented using the architecture.
 
-## Getting Started
+This was created using the angular2-redux-starter from rangle.
 
-Use our [starter script](https://www.npmjs.com/package/rangle-starter), with
-`angular2-redux-starter` as the `techStack` argument.
+## Planned Functionality
+
+- Users can login
+- Users can have skill sheets
+- A skill sheet can have skills
+- Each skill will have a star rating and a name
+- The user can modify skill ratings
+
+## Visual Components
+
+star
+skill-bar
+skill-sheet
+create-skill-sheet
+create-skill-bar
+login
+
+## Goals
+
+- showcase how to test real world, non trivial apps with Angular 2 and Redux
+- showcase how to engineer high DX code with Redux and Angular 2
+- showcase how to think about and architect dumb/smart component combinations
+
 
 ## Commands
 
@@ -20,21 +41,7 @@ Use our [starter script](https://www.npmjs.com/package/rangle-starter), with
 * `npm run e2e`: will run the e2e suite for this project located in *e2e* (refer to *wdio.conf.js* and *gulpfile.js* for more info, this is the only `gulp` dependency).
 * `npm run typings`: removes existing typings located in *typings* directory, reinstalls them based on *tsd.json*, and links whatever is available in *node_modules* (using `tsd link`).
 
-## Improvements
-
-This is an initial version of this setup and will be expanded in the future. Refer to the [issues section](https://github.com/rangle/angular2-redux-starter/issues) to see what needs to be done, or create a [new one](https://github.com/rangle/angular2-redux-starter/issues/new).
-
-## If something doesn't work
-
-Refer to the [issues section](https://github.com/rangle/angular2-redux-starter/issues) to see if this has already been logged. Otherwise create a [new issue](https://github.com/rangle/angular2-redux-starter/issues/new).
-
-## Example Application
-
-TBC
-
-## License
-
-Copyright (c) 2016 rangle.io
+Copyright (c) 2016 kosz 
 
 [MIT License][MIT]
 

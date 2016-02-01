@@ -1,4 +1,4 @@
-# Skill Sheet Demo App 
+# Skill Sheet Demo App [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 This is an attempt at a non trivial Angular 2.x, Redux, TypeScript and Webpack app to clearly showcase how real world scenarios can be implemented using the architecture.
 
@@ -26,7 +26,7 @@ login
 - showcase how to test real world, non trivial apps with Angular 2 and Redux
 - showcase how to engineer high DX code with Redux and Angular 2
 - showcase how to think about and architect dumb/smart component combinations
-
+- showcase commitizen and the beauty of auto-generatable changelogs
 
 ## Commands
 
@@ -34,14 +34,20 @@ login
 * `postinstall`: runs automatically after `npm install` and triggers a `npm run build` to provide a build directory to `npm start` by default
 
 * `npm run dev`: will start webpack's development server (with live reloading) on [http://localhost:8080](http://localhost:8080). Note that in this case the bundle will be generated in memory and your bundle in *dist* might get out of sync.
+
 * `npm start`: starts a production server serving the *dist* directory on [http://localhost:3000](http://localhost:3000)
 
 * `npm run build`: bundle all of the application including js/css/html files, with index.html generated according to a template specified in *index.html* (Everything will be put into *dist* folder).
+
 * `npm test`: will run the unit tests for the project as specified in *karma.conf.js* (everything ending in .test.ts will ge picked up, refer to *src/tests.entry.ts* if other extensions should be used).
-* `npm run e2e`: will run the e2e suite for this project located in *e2e* (refer to *wdio.conf.js* and *gulpfile.js* for more info, this is the only `gulp` dependency).
+
+* `npm run e2e`: will run the e2e suite for this project located in *e2e* (refer to *wdio.conf.js* and *gulpfile.js* for more info).
+
 * `npm run typings`: removes existing typings located in *typings* directory, reinstalls them based on *tsd.json*, and links whatever is available in *node_modules* (using `tsd link`).
 
-Copyright (c) 2016 kosz 
+* `git cz`: After installing `commitizen` globally with `npm install -g commitizen`, you can contribute with easily readable and parseable commit messages for a changelog!
+
+Copyright (c) 2016 kosz
 
 [MIT License][MIT]
 

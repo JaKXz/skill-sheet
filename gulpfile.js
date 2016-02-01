@@ -3,6 +3,7 @@ var path = require('path');
 var selenium = require('selenium-standalone');
 var webdriver = require('gulp-webdriver');
 var webserver = require('gulp-webserver');
+var conventionalChangelog = require('gulp-conventional-changelog');
 
 var stream;
 
@@ -41,4 +42,12 @@ gulp.task('selenium', function (done) {
       done();
     });
   });
+});
+
+gulp.task('changelog', function () {
+  return gulp.src('CHANGELOG.md', {buffer: false})
+    .pipe(conventionalChangelog({
+      preset: 'angular'
+    }))
+    .pipe(gulp.dest('./'));
 });

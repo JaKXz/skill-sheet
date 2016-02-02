@@ -1,7 +1,7 @@
 {
-  "name": "angular2-redux-starter",
+  "name": "skill-sheet",
   "version": "0.1.0",
-  "description": "A boiler-plate setup for Angular 2/Redux applications",
+  "description": "A non-trivial demo app for ng2-redux-ts architecture",
   "license": "MIT",
   "keywords": [
     "angular2",
@@ -20,14 +20,16 @@
     "prebuild": "npm run clean",
     "build": "NODE_ENV=production webpack",
     "test": "karma start",
-    "e2e": "npm run build && gulp e2e"
+    "e2e": "npm run build && gulp e2e",
+    "preversion": "npm run test",
+    "postversion": "gulp changelog && git commit -a --amend --no-edit"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rangle/angular2-redux-starter.git"
+    "url": "https://github.com/kosz/skill-sheet.git"
   },
   "bugs": {
-    "url": "https://github.com/rangle/angular2-redux-starter/issues"
+    "url": "https://github.com/kosz/skill-sheet/issues"
   },
   "dependencies": {
     "angular2": "^2.0.0-beta.1",
@@ -52,9 +54,11 @@
   "devDependencies": {
     "chai": "^3.4.0",
     "css-loader": "^0.21.0",
+    "cz-conventional-changelog": "^1.1.5",
     "extract-text-webpack-plugin": "^0.9.0",
     "file-loader": "^0.8.4",
     "gulp": "^3.9.0",
+    "gulp-conventional-changelog": "^0.7.0",
     "gulp-webdriver": "^1.0.1",
     "gulp-webserver": "^0.9.1",
     "html-webpack-plugin": "^1.6.2",
@@ -84,5 +88,10 @@
     "typescript": "^1.7.3",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.9"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
